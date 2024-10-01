@@ -64,7 +64,7 @@ function updateTotalvalues() {
     tsgst = 0;
     tcount = 0; 
     productNames.forEach((name, i) => {
-        totalAmount = parseFloat(totalAmount) + tamount[i];
+        totalAmount = parseFloat(totalAmount) +  parseFloat(tamount[i]);
         tunitprice = tunitprice + productPrices[i];
         tcount = tcount + quantities[i];
         tcgst = tcgst + cgsts[i];
@@ -113,9 +113,9 @@ function refreshProductTable() {
                     <td>${name}</td>
                     <td>${qty}</td>
                     <td>Rs. ${productPrice.toFixed(2)}</td>
-                    <td>Rs. ${cgst.toFixed(2)}</td>
-                    <td>Rs. ${sgst.toFixed(2)}</td>
-                    <td>Rs. ${tamt.toFixed(2)}</td>
+                    <td>Rs. ${cgst}</td>
+                    <td>Rs. ${sgst}</td>
+                    <td>Rs. ${tamt}</td>
                     <td><span class="delete-button" onclick="deleteProduct(this, ${productPrice}, ${i})">Delete</span></td>
                 `;
         productTableBody.appendChild(row);
