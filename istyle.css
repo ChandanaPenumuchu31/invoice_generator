@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Body background with dark navy blue */
+body {
+    background-color: #001f3f; /* Dark navy blue */
+    padding: 20px;
+}
+
+/* Invoice container background with light orange */
+.invoice-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffefd5; /* Light orange */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #006400; /* Dark green */
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+
+.details, .products {
+    margin: 20px 0;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 50%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.details input,
+.details label {
+    display: inline-block;
+    width: 45%; 
+    margin: 5px;
+}
+
+.products input,
+.products label {
+    display: inline-block;
+    width: 45%; 
+    margin: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+    button:nth-of-type(1) {
+        background-color: #32CD32; 
+        color: white;
+    }
+
+    
+    button:nth-of-type(2) {
+        background-color: #FF6347; 
+        color: white;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td {
+    background-color: #fff;
+}
+
+
+.delete-button {
+    color: #ff6347;
+    cursor: pointer;
+}
+
+    .delete-button:hover {
+        text-decoration: underline;
+    }
+
+#product-table th, #product-table td {
+    text-align: center;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #00008B; 
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .invoice-container {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+        width: 100%;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .details input,
+    .details label,
+    .products input,
+    .products label {
+        width: 100%; 
+    }
+}

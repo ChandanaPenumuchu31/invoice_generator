@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic Invoice Generator</title>
+    <link rel="stylesheet" href="istyle.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="header">
+            <h1>INVOICE GENERATOR</h1>
+        </div>
+        <hr>
+
+        <div class="details">
+
+            <label for="invoiceNumber">Invoice #</label>
+            <input type="text" id="invoiceNumber" placeholder="Enter Invoice Number"><br><br>
+
+            <label for="invoiceDate">Date</label>
+            <input type="date" id="invoiceDate"><br><br>
+
+            <hr />
+            <center> <h2>CUSTOMER DETAILS</h2></center>
+            <hr />
+
+            <label for="customerName">Customer Name</label>
+            <input type="text" id="customerName" placeholder="Enter Customer Name"><br><br>
+
+            <label for="companyName">Company Name</label>
+            <input type="text" id="companyName" placeholder="Enter Company Name"><br><br>
+
+            <label for="customerAddress">Customer Address</label>
+            <input type="text" id="customerAddress" placeholder="Enter Door No"><br><br>
+
+            <label for="areaname">Area Name</label>
+            <input type="text" id="areaname" placeholder="Enter Area Name"><br><br>
+
+            <label for="cityname">City Name</label>
+            <input type="text" id="cityname" placeholder="Enter City Name"><br><br>
+
+            <label for="statename">State Name</label>
+            <input type="text" id="statename" placeholder="Enter State Name"><br><br>
+
+            <label for="pincode">Pincode</label>
+            <input type="text" id="pincode" placeholder="Enter Pincode"><br><br>
+
+            <label for="mnum">Enter Mobile Number</label>
+            <input type="text" id="mnum" placeholder="Enter Mobile Number"><br><br>
+
+            <label for="pos">Place of supply</label>
+            <input type="text" id="pos" placeholder="Enter Place of supply"><br><br>
+
+            <label for="gstin">GSTIN</label>
+            <input type="text" id="gstin" placeholder="Enter GSTIN"><br><br>
+        </div>
+
+
+        <div class="products">
+            <hr />
+            <center> <h2>PRODUCT DETAILS</h2> </center>
+            <hr />
+            <label for="ProductName">Product Name  </label>
+            <input type="text" id="PName" placeholder="Enter Product Name"><br><br>
+
+            <label for="ProductPrice">Product Price  </label>
+            <input type="text" id="PPrice" placeholder="Enter Product Price"><br><br>
+
+            <label for="Quantity">Quantity  </label>
+            <input type="text" id="qty" placeholder="Enter Quantity"><br><br>
+
+            <label for="GST">GST Percent  </label>
+            <select id="gst-percent">
+                <option value="">Select GST</option>
+                <option value="0">0</option>
+                <option value="9">9</option>
+                <option value="18">18</option>
+            </select><br /><br />
+            <center> <button onclick="addProduct()">Add Product</button></center>
+
+        </div>
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Product Name</th>
+                    <th>Qty&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>cgst&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>sgst&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Amount&nbsp;&nbsp;&nbsp;</th>
+                    <th>Remove&nbsp;&nbsp;&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <br />
+        <center> <button onclick="generateInvoice()">Generate Invoice</button></center>
+    </div>
+
+    <script src="iscript.js"></script> 
+</body>
+</html>
